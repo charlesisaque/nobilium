@@ -6,7 +6,8 @@ import {
   FaBusAlt, 
   FaCarSide, 
   FaPassport, 
-  FaUmbrellaBeach 
+  FaUmbrellaBeach,
+  FaBus
 } from 'react-icons/fa';
 
 const servicesList = [
@@ -17,6 +18,7 @@ const servicesList = [
   { id: 5, title: 'Locação de Veículos', icon: <FaCarSide size={40} />, desc: 'Carros executivos e utilitários para sua total mobilidade.' },
   { id: 6, title: 'Vistos Consulares', icon: <FaPassport size={40} />, desc: 'Assessoria completa e ágil para emissão de vistos e passaportes.' },
   { id: 7, title: 'Passeios Turísticos', icon: <FaUmbrellaBeach size={40} />, desc: 'Roteiros exclusivos e experiências incríveis no seu destino.' },
+  { id: 8, title: 'Locação de Van e Ônibus', icon: <FaBus size={40} />, desc: 'Veículos modernos e confortáveis para o transporte do seu grupo com segurança.' },
 ];
 
 const Services = () => {

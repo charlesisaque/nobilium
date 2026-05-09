@@ -132,6 +132,7 @@ const Contact = () => {
                   <option value="Transporte Fluvial">Transporte Fluvial</option>
                   <option value="Transporte Rodoviário">Transporte Rodoviário</option>
                   <option value="Locação de Veículos">Locação de Veículos</option>
+                  <option value="Locação de Van e Ônibus">Locação de Van e Ônibus</option>
                   <option value="Vistos Consulares">Vistos Consulares</option>
                   <option value="Passeios Turísticos">Passeios Turísticos</option>
                   <option value="Outro">Outro (especificar na mensagem)</option>
