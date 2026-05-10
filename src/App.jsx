@@ -1,28 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Differentials from './components/Differentials';
-import Gallery from './components/Gallery';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import Home from './pages/Home';
+import Partner from './pages/Partner';
 
 function App() {
   return (
-    <div className="font-sans antialiased bg-nobilium-white text-nobilium-dark min-h-screen">
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Differentials />
-        <Gallery />
-        <Contact />
-      </main>
-      <FloatingWhatsApp />
-      <Footer />
-    </div>
+    <Router>
+      <div className="font-sans antialiased bg-nobilium-white text-nobilium-dark min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/parceiro" element={<Partner />} />
+        </Routes>
+        <FloatingWhatsApp />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

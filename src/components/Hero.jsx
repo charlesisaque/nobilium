@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 import heroBg from '../assets/hero_bg.png';
-import { Link } from 'react-scroll';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Hero = () => {
   return (
@@ -41,10 +41,8 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-6"
         >
           <Link
-            to="services"
+            to="/#services"
             smooth={true}
-            duration={500}
-            offset={-80}
             className="cursor-pointer bg-nobilium-gold text-nobilium-dark px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl shadow-nobilium-gold/20"
           >
             Solicitar Orçamento

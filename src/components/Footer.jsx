@@ -1,5 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa';
-import { Link } from 'react-scroll';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
@@ -18,13 +18,11 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-wider">Links Rápidos</h4>
             <ul className="flex flex-col gap-3">
-              {['Início', 'Serviços', 'Sobre a Empresa', 'Diferenciais', 'Galeria', 'Contato'].map((item, index) => (
+              {['Início', 'Serviços', 'Sobre a Empresa', 'Diferenciais', 'Galeria', 'Contato', 'Seja Parceiro'].map((item, index) => (
                 <li key={index}>
                   <Link 
-                    to={item === 'Início' ? 'home' : item === 'Sobre a Empresa' ? 'about' : item.toLowerCase()} 
+                    to={item === 'Início' ? '/#home' : item === 'Sobre a Empresa' ? '/#about' : item === 'Seja Parceiro' ? '/parceiro' : `/#${item.toLowerCase()}`} 
                     smooth={true} 
-                    duration={500} 
-                    offset={-80}
                     className="text-gray-400 hover:text-nobilium-gold transition-colors cursor-pointer text-sm"
                   >
                     {item}

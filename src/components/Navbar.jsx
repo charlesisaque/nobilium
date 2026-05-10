@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { HashLink as Link } from 'react-router-hash-link';
 import { FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/nobiliumlogo.png';
 
@@ -22,11 +22,12 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { id: 1, name: 'Início', target: 'home' },
-    { id: 2, name: 'Serviços', target: 'services' },
-    { id: 3, name: 'Sobre', target: 'about' },
-    { id: 4, name: 'Diferenciais', target: 'differentials' },
-    { id: 5, name: 'Contato', target: 'contact' },
+    { id: 1, name: 'Início', target: '/#home' },
+    { id: 2, name: 'Serviços', target: '/#services' },
+    { id: 3, name: 'Sobre', target: '/#about' },
+    { id: 4, name: 'Diferenciais', target: '/#differentials' },
+    { id: 5, name: 'Contato', target: '/#contact' },
+    { id: 6, name: 'Seja Parceiro', target: '/parceiro' },
   ];
 
   return (
@@ -36,7 +37,7 @@ const Navbar = () => {
       }`}
     >
       <div className="flex items-center">
-        <Link to="home" smooth={true} duration={500} className="cursor-pointer">
+        <Link to="/#home" smooth={true} className="cursor-pointer">
           <img
             src={logo}
             alt="Nobilium Logo"
@@ -54,8 +55,6 @@ const Navbar = () => {
             <Link
               to={target}
               smooth={true}
-              duration={500}
-              offset={-80}
               className="text-nobilium-white uppercase tracking-wider text-sm font-semibold hover:text-nobilium-gold transition-colors duration-300 cursor-pointer"
             >
               {name}
@@ -94,8 +93,6 @@ const Navbar = () => {
               onClick={handleClick}
               to={target}
               smooth={true}
-              duration={500}
-              offset={-80}
               className="text-nobilium-white hover:text-nobilium-gold transition-colors duration-300"
             >
               {name}
